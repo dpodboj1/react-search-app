@@ -1,0 +1,44 @@
+body {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #091E42;
+  line-height: 20px;
+}
+
+.containerResultList {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 31px;
+}
+
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 121px;
+  background-image: linear-gradient(-180deg, #FAFAFA 0%, #FAFCFE 100%);
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+}
+
+.containerHeader > input[type=text] {
+  height: 50px;
+  width: 540px;
+  border: 2px solid #E3E6EA;
+  border-radius: 8px;
+  font-size: 18px;
+  padding-left: 59px;
+  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: 23px;
+}
+
+/* Extra div from the right side of the search input which aligns it to resultlist */
+.extra {
+  width: 117px;
+}
+
+*:focus {
+  outline: none;
+}

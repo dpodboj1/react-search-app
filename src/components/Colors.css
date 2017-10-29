@@ -1,0 +1,23 @@
+.containerColor {
+  display: inline-flex;
+  padding-right: 49px;
+  padding-left: 20px;
+}
+
+.yellow {
+  background-color: #DEDE3B;
+  width: 16px;
+  height: 8px;
+}
+
+.green {
+  background-color: #74AC1B;
+  width: 16px;
+  height: 8px;
+}
+
+.blue {
+  background-color: #009DE0;
+  width: 16px;
+  height: 8px;
+}
