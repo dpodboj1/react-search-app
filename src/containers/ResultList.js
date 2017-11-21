@@ -2,9 +2,7 @@ import React from 'react';
 import shortid from 'shortid';
 import Result from '../components/Result';
 
-const ResultList = ({ wiki, duck }) => {
-  //  combine results from Wikipedia API and DuckDuckGo API with the spread operator
-  const results = [...wiki, ...duck];
+const ResultList = ({ results }) => {
   //  filter through the results if any are undefined and do not include those in the array
   const resultsFiltered = results.filter(result => (
     result.title !== undefined
