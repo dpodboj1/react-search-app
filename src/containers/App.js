@@ -16,7 +16,6 @@ export default class App extends React.Component {
   }
 
   async startQuery(query) {
-    console.log(encodeURIComponent(query));
     //  if the query is not empty make an API req
     if (query !== '') {
       //  empty array to push the results from APIs
