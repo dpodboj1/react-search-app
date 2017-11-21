@@ -16,12 +16,13 @@ export default class App extends React.Component {
   }
 
   async startQuery(query) {
+    console.log(encodeURIComponent(query));
     //  if the query is not empty make an API req
     if (query !== '') {
       //  empty array to push the results from APIs
       const resultsUnfiltered = [];
       //  get wikipedia api data
-      const wiki = await getDataFromApi(`https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=${query}`);
+      const wiki = await getDataFromApi(`https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=${encodeURIComponent(query)}`);
       //  map through the data and push them to results array
       wiki.query.search.map(result =>
         resultsUnfiltered.push({
@@ -30,7 +31,7 @@ export default class App extends React.Component {
           title: result.title,
         }));
       //  get duckduckgo api data
-      const duck = await getDataFromApi(`https://api.duckduckgo.com/?q=${query}&format=json`);
+      const duck = await getDataFromApi(`https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json`);
       //  map through the data and push them to results array
       duck.RelatedTopics.map(result =>
         resultsUnfiltered.push({
