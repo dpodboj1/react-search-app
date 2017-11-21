@@ -19,7 +19,6 @@ export default class App extends React.Component {
     if (query !== '') {
       const results = [];
       const wiki = await getDataFromApi(`https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=${query}`);
-      console.log(wiki);
       wiki.query.search.map(result =>
         results.push({
           src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/50px-Wikipedia-logo.png',
