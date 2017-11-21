@@ -2,23 +2,15 @@ import React from 'react';
 import shortid from 'shortid';
 import Result from '../components/Result';
 
-const ResultList = ({ results }) => {
-  //  filter through the results if any are undefined and do not include those in the array
-  const resultsFiltered = results.filter(result => (
-    result.title !== undefined
-  ));
-  //  mix the array randomly
-  resultsFiltered.sort(() => Math.random() - 0.5);
+const ResultList = ({ results }) =>
   //  map through the filtered array and for each object create a Result component to contain it
-  return (
-    resultsFiltered.map(result =>
-      (<Result
-        key={shortid.generate()}
-        src={result.src}
-        alt={result.alt}
-        title={result.title}
-      />))
+  (results.map(result =>
+    (<Result
+      key={shortid.generate()}
+      src={result.src}
+      alt={result.alt}
+      title={result.title}
+    />))
   );
-};
 
 export default ResultList;
